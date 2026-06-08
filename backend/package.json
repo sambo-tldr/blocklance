@@ -1,0 +1,29 @@
+{
+  "name": "blocklancer-backend",
+  "version": "1.0.0",
+  "description": "BlockLancer TypeScript backend with Chainhook indexing",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "migrate": "tsx src/db/migrate.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.1",
+    "@stacks/network": "^7.0.1",
+    "@stacks/transactions": "^7.0.1",
+    "@types/node": "^22.10.5",
+    "@types/pg": "^8.11.10",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
+    "pg": "^8.13.1",
+    "pino": "^9.6.0",
+    "typescript": "^5.7.3",
+    "x402-stacks": "^2.0.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}
