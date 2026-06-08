@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-blocklancer_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-blocklancer_password}
+      POSTGRES_DB: ${POSTGRES_DB:-blocklancer}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./migrations:/docker-entrypoint-initdb.d/
+
+volumes:
+  postgres_data:
