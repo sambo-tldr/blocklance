@@ -1,0 +1,57 @@
+[project]
+name = 'blocklancer'
+description = ''
+authors = []
+telemetry = true
+cache_dir = './.cache'
+requirements = [
+  { contract_id = 'SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4.sbtc-deposit' },
+]
+
+[contracts.blocklancer-payments-v2]
+path = 'contracts/blocklancer-payments-v2.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.blocklancer-escrow-v4]
+path = 'contracts/blocklancer-escrow-v3.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.blocklancer-dispute-v5]
+path = 'contracts/blocklancer-dispute-v4.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.blocklancer-dao-v3]
+path = 'contracts/blocklancer-dao-v2.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.blocklancer-reputation]
+path = 'contracts/blocklancer-reputation.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.blocklancer-marketplace]
+path = 'contracts/blocklancer-marketplace.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.blocklancer-membership]
+path = 'contracts/blocklancer-membership.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
+
+[repl.remote_data]
+enabled = false
+api_url = 'https://api.hiro.so'
